@@ -1,0 +1,39 @@
+GIT
+  remote: https://github.com/iphoting/vienna.git
+  revision: ddcf6a6013b0474830338742f285d932e61831c3
+  branch: index-fix
+  specs:
+    vienna (0.4.2)
+      rack (~> 2.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    iodine (0.7.57)
+    nio4r (2.5.9)
+    puma (6.3.1)
+      nio4r (~> 2.0)
+    rack (2.2.8)
+    rack-ssl-enforcer (0.2.9)
+    rack-timeout (0.6.3)
+
+PLATFORMS
+  aarch64-linux
+  arm64-darwin
+  ruby
+  x86_64-darwin
+  x86_64-linux
+
+DEPENDENCIES
+  iodine
+  puma
+  rack
+  rack-ssl-enforcer
+  rack-timeout
+  vienna (~> 0.4, >= 0.4.2)!
+
+RUBY VERSION
+   ruby 3.2.2p53
+
+BUNDLED WITH
+   2.4.19
