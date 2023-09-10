@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/iphoting/vienna.git
-  revision: ddcf6a6013b0474830338742f285d932e61831c3
-  branch: index-fix
-  specs:
-    vienna (0.4.2)
-      rack (~> 2.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -16,6 +8,11 @@ GEM
     rack (2.2.8)
     rack-ssl-enforcer (0.2.9)
     rack-timeout (0.6.3)
+    rackstaticapp (0.1.0)
+      rack (~> 2.0)
+      vienna (~> 0.4.0)
+    vienna (0.4.2)
+      rack (~> 2.0)
 
 PLATFORMS
   aarch64-linux
@@ -30,7 +27,7 @@ DEPENDENCIES
   rack
   rack-ssl-enforcer
   rack-timeout
-  vienna (~> 0.4, >= 0.4.2)!
+  rackstaticapp
 
 RUBY VERSION
    ruby 3.2.2p53

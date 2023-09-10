@@ -7,7 +7,7 @@ ruby File.read('.ruby-version', mode: 'rb').chomp
 gem 'rack'
 gem 'rack-ssl-enforcer'
 gem 'rack-timeout'
-gem 'vienna', "~> 0.4", ">= 0.4.2", :github => 'iphoting/vienna', :branch => 'index-fix'
+gem 'rackstaticapp'
 
 group :development do
   gem "puma"
