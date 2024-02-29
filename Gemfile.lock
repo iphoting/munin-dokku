@@ -5,7 +5,7 @@ GEM
     nio4r (2.5.9)
     puma (6.3.1)
       nio4r (~> 2.0)
-    rack (2.2.8)
+    rack (2.2.8.1)
     rack-ssl-enforcer (0.2.9)
     rack-timeout (0.6.3)
     rackstaticapp (0.1.0)
