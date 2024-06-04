@@ -1,13 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    iodine (0.7.57)
-    nio4r (2.5.9)
-    puma (6.3.1)
+    iodine (0.7.58)
+    nio4r (2.7.3)
+    puma (6.4.2)
       nio4r (~> 2.0)
-    rack (2.2.8)
+    rack (2.2.9)
     rack-ssl-enforcer (0.2.9)
-    rack-timeout (0.6.3)
+    rack-timeout (0.7.0)
     rackstaticapp (0.1.0)
       rack (~> 2.0)
       vienna (~> 0.4.0)
