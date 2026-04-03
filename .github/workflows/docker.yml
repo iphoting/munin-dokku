@@ -1,0 +1,35 @@
+name: docker
+
+on: [push, pull_request]
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t app .
+
+      - name: Start container
+        run: docker run -d -p 9292:9292 app bundle exec rackup -o 0.0.0.0
+
+      - name: Wait for container
+        run: |
+          for i in $(seq 1 15); do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:9292/ || true)
+            if [ "$STATUS" = "200" ] || [ "$STATUS" = "404" ]; then
+              echo "Ready (HTTP $STATUS)"
+              exit 0
+            fi
+            echo "Attempt $i: HTTP $STATUS — waiting..."
+            sleep 2
+          done
+          docker logs $(docker ps -lq)
+          exit 1
+
+      - name: Smoke test
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:9292/)
+          echo "HTTP $STATUS"
+          [ "$STATUS" = "200" ] || [ "$STATUS" = "404" ]
