@@ -2,8 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     iodine (0.7.58)
-    nio4r (2.7.3)
-    puma (6.4.2)
+    nio4r (2.7.5)
+    puma (6.4.3)
       nio4r (~> 2.0)
     rack (2.2.9)
     rack-ssl-enforcer (0.2.9)
