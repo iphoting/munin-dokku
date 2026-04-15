@@ -8,11 +8,4 @@ gem 'rack'
 gem 'rack-ssl-enforcer'
 gem 'rack-timeout'
 gem 'rackstaticapp'
-
-group :development do
-  gem "puma"
-end
-
-group :production do
-	gem "iodine"
-end
+gem "puma"
